@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.solar-system {
+    font-size: 10px;
+    width: 100em;
+    height: 100em;
+    position: relative;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15em;
+    height: 15em;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 0.1em dashed rgba(255, 255, 255, 0.2);
+}
+
+.planet-orbit {
+    animation: rotate linear infinite;
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mercury-orbit {
+    width: 22em;
+    height: 22em;
+    animation-duration: 8.8s;
+}
+
+.mercury {
+    top: 0;
+    left: 50%;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: #b5b5b5;
+}
+
+.venus-orbit {
+    width: 30em;
+    height: 30em;
+    animation-duration: 22.5s;
+}
+
+.venus {
+    top: 0;
+    left: 50%;
+    width: 2.8em;
+    height: 2.8em;
+    background-color: #e39e54;
+}
+
+.earth-orbit {
+    width: 50em;
+    height: 50em;;
+    animation-duration: 36.5s;
+}
+
+.earth {
+    top: 0;
+    left: 50%;
+    width: 3em;
+    height: 3em;
+    background-color: aqua;
+    position: relative;
+}
+
+.moon-orbit {
+    width: 8em;
+    height: 8em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -4em;
+    margin-left: -4em;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    border-width: 0.1em 01em 0 0;
+    border-radius: 50%;
+    animation: orbit 2.7s linear infinite;
+    /* border: 1px solid red;  for debugging*/ 
+}
+
+.moon {
+    top: 0.1em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mars-orbit {
+    width: 70em;
+    height: 70em;
+    animation-duration: 68.7s;
+}
+
+.mars {
+    top: 0;
+    left: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: #ff5733;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+    
+}

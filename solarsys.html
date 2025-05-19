@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <link rel="stylesheet" href="planet_styles.css">
+    <link rel="stylesheet" href="planets.css">
+    <title>Sonnensystem</title>
 </head>
-
 <body>
-    <div class="container">
+    <div class="solar-system">
         <div class="sun"></div>
 
-        <div class="planet earth">
-            <div class="moon"></div>
+        <div class="orbit planet-orbit mercury-orbit">
+            <div class="planet mercury"></div>
         </div>
+
+        <div class="orbit planet-orbit venus-orbit">
+            <div class="planet venus"></div>
+        </div>
+
+        <div class="orbit planet-orbit earth-orbit">
+            <div class="planet earth">
+                <div class="moon-orbit">
+                    <div class="moon"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="orbit planet-orbit mars-orbit">
+            <div class="planet mars"></div>
+        </div>
+    </div>
 </body>
 </html>
